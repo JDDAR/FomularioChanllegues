@@ -1,0 +1,251 @@
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+:root{
+    --font-family:'Montserrat', sans-serif;
+    --font-weight: 600;
+
+    --index: calc(1vw + 1vh);
+
+    /* colors */
+    --color1: #4E5150;
+    --color2: #333333;
+    --color3: #828282;
+    --color4: #f2f2f2;
+    --color5: #F2994A;
+
+
+}
+body{
+    font-family: var(--font-family);
+    font-size: calc(var(--index) * .8);
+}
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+/* Header -----------------------------*/
+.header_form h1 {
+    color: var(--color1);
+    font-size: 36px;
+    bottom: 0;
+    padding-top: 25px;
+}
+/* Contenido formulario -------------- */
+.content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+}
+.content_left,
+.content_right{
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+@media (max-width : 700px ){
+    .content{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+    .content_left,
+    .content_right{
+        width: 100%;
+    }
+}
+/* Form ***********************/
+.form_data {
+    width: 80%;
+}
+.form_data h2 {
+    color:var(--color2);
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+.form_data label {
+    color:var(--color3);
+    font-size: 12px;
+}
+.item_form{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: var(--color3);
+    margin: 5px 0px;
+}
+.item_form span {
+    position: absolute;
+    padding: 10px;
+}
+.item_form input {
+    padding: 15px  50px;
+    border: 1px solid var(--color3);
+    width: 100%;
+    border-radius: 12px;
+}
+.item_form input::placeholder{
+    position: relative;
+}
+
+.location_form {
+    display: flex;
+    gap: 20px;
+}
+.check_form  {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+.button_form {
+  position: relative;
+}
+
+ #submit_form {
+    position: absolute;
+    right: 0;
+    width: 40%;
+    justify-content: center;
+    background-color: var(--color5);
+    border: none;
+    color: #fff ;
+    font-weight: var(--font-weight);
+}
+/* content shipping */
+
+.content_shipp {
+    width: 70%;
+    background-color: var(--color4);
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 50px;
+   
+}
+.product_shipp{
+    display: flex;
+    margin-bottom: 25px;
+}
+.product_shipp img {
+    width: 40%;
+    border-radius: 12px;
+    margin-right: 20px;
+}
+.des_product {
+    position: relative;
+    width: 100%;
+}
+.des_product  h3 {
+    font-size: 16px;
+    line-height: 1.5rem;
+}
+.des_product p {
+    font-size: 16px;
+    color: var(--color5);
+}
+.des_product span {
+    color: var(--color3);
+    font-size: 12px;
+    text-decoration:line-through;
+}
+.selec_number {
+    position: absolute;
+    bottom: 0;
+}
+.selec_number input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color3);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+}
+.selec_number input[type=number]::-webkit-inner-spin-button {
+ opacity: 1;
+}
+.total_shipp {
+    margin-top: 90px;
+}
+.valor_shipp{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+    border-top: 1px solid var(--color3);
+}
+.valor_shipp h3 {
+    font-size: 18px;
+    color: var(--color2);
+}
+.valor_shipp p {
+    font-size: 14px;
+    color: var(--color2);
+}
+/* reponsive left and right */
+@media (max-width : 1280px ) {
+
+    .content_shipp {
+        width: 80%;
+    }
+}
+@media (max-width : 1080px ) {
+    .container {
+        width: 80%;
+    }
+    
+    .content_shipp {
+        width: 90%;
+    }
+}
+@media (max-width : 980px ) {
+    .container {
+        width: 90%;
+    }
+    .content_shipp {
+        width: 100%;
+    }
+
+}
+@media (max-width : 700px ) {
+    .content_right{
+        margin-bottom: 0;
+    }
+    .form_data {
+        width: 100%;
+    }
+    .content_shipp {
+       margin-top: 25px;
+    }
+    .product_shipp img {
+        width: 30%;
+    }
+
+}
+/* footer--------------------------- */
+footer{
+    position:relative;
+    height: 10vh;
+    width: 100%;
+    bottom: 0;
+
+}
+.content_footer {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    color: var(--color3);
+    font-size: 14px;
+}
+.content_footer a{
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--color2);
+}
